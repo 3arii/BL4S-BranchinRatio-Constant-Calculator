@@ -27,7 +27,7 @@ for i in br_values:
   eq_library.append(eq1)
 
 
-solution_dictionary = solve((eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0]), (a, b, c, d, e, f, g))
+solution_dictionary = solve((eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0]), (a, b, c, d, e, f, g, h, i, j))
 
 # Positron number test
 eq1 = Eq((kplus_n * (solution_dictionary[1]*0.0507 * solution_dictionary[9])*0.003), positron_n)
