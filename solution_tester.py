@@ -30,7 +30,7 @@ for i in br_values:
 solution_dictionary = solve((eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0], eq_library[0]), (a, b, c, d, e, f, g))
 
 # Positron number test
-eq1 = Eq((kplus_n * (solution_dictionary[1] * solution_dictionary[9])), positron_n)
+eq1 = Eq((kplus_n * (solution_dictionary[1]*0.0507 * solution_dictionary[9])*0.003), positron_n)
 if(solve(eq1)):
   tested_solution_dictionary.append(solution_dictionary[1], solution_dictionary[9])
   
@@ -40,11 +40,11 @@ if(solve(eq1)):
   tested_solution_dictionary.append(solution_dictionary[0], solution_dictionary[2], solution_dictionary[6], solution_dictionary[7], solution_dictionary[8])
 
 # π+ number test
-eq1 = Eq((kplus_n * (solution_dictionary[3] + solution_dictionary[4] + 2*solution_dictionary[5])) , piplus_n)
+eq1 = Eq((kplus_n * (solution_dictionary[3]*0.2067 + solution_dictionary[4]*0.0176 + 2*solution_dictionary[5])*0.0558) , piplus_n)
 if(solve(eq1)):
   tested_solution_dictionary.append(solution_dictionary[3], solution_dictionary[4], solution_dictionary[5])
 
 # π- number test
-eq1 = Eq((kplus_n * (solution_dictionary[5])), pinegative_n)
+eq1 = Eq((kplus_n * (solution_dictionary[5])*0.0558), pinegative_n)
 if (solve(eq1)):
   tested_solution_dictionary.append(solution_dictionary[5])
